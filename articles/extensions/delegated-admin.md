@@ -350,6 +350,8 @@ When creating a new user the UI will show a picklist where you can choose the me
 Hook contract:
 
  - `ctx`: The context object.
+   - `payload`: The payload object.
+     - `user`: The user for which we want to load the memberships.
  - `callback(error, { createMemberships: true/false, memberships: [ ...] })`: The callback to which you can return an error and an object containing the membership configuration.
 
 Example: Users of the IT department should be able to create users in other departments. Users from other departments, should only see their own department.
